@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(214, 226, 162);
+    background-color: rgb(180, 179, 179);
 }
 
 hr {
@@ -29,6 +29,19 @@ td {
 .heading {
     text-align: center;
     text-shadow: 5px 5px 10px #444;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding-top: 15px;
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+
 }
 
 #para {
