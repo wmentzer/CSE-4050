@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
     <head>
@@ -7,17 +8,18 @@
 
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-        <link rel="stylesheet" href="./style/stopwatch.css">
-        <link rel="stylesheet" href="./style/style.css">
-        <link rel="stylesheet" href="./style/tipcalc.css">
-        <script type="text/javascript" src="./scripts/timer.js"></script>
-        <script type="text/javascript" src="./scritps/tipcalc.js"></script>
+        <link rel="stylesheet" href="{% static 'css/stopwatch.css' %}">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/tipcalc.css' %}">
+        <script type="text/javascript" src="{% static 'scripts/timer.js' %}"></script>
+        <script type="text/javascript" src="{% static 'scripts/schedule.js' %}"></script>
+        <script type="text/javascript" src="{% static 'scripts/tipcalc.js' %}"></script>
 
         <title>JavaScript Practice</title>
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="./base.html">CSE 4050</a>
+            <a class="navbar-brand" href="{% url 'base' %}">CSE 4050</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -25,11 +27,11 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="./table.html">Progress Table</a>
+                        <a class="nav-link" href="{% url 'progress' %}">Progress Table</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="./js_practice.html">JavaScript Practice</a>
+                        <a class="nav-link" href="{% url 'jspractice' %}">JavaScript Practice</a>
                     </li>
                 </ul>
             </div>
@@ -74,11 +76,21 @@
                 <small id="each"></small>
             </div>
         </div>
+
+        <div class="schedule">
+            <h1>Weekly Schedule</h1>
+            <div class="container">
+                <table class="table table-stripped">
+                    <tbody id="data">
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </body>
     
     <footer class="page-footer fixed-bottom">
         <div class="footer">
-            <a href="https://github.com/wmentzer" class="fa fa-github"><img src="./images/GitHub.png"></a>
+            <a href="https://github.com/wmentzer" class="fa fa-github"><img src="../media/GitHub.png"></a>
             <p>Created by Will Mentzer</p>
         </div>
     </footer>

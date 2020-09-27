@@ -1,15 +1,16 @@
+{% load static %}
 <!DOCTYPE html>
 
 <html>
     <head>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
         <title>Progress Table</title>
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="./base.html">CSE 4050</a>
+            <a class="navbar-brand" href="{% url 'base' %}">CSE 4050</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -17,11 +18,11 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="./table.html">Progress Table</a>
+                        <a class="nav-link" href="{% url 'progress' %}">Progress Table</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="./js_practice.html">JavaScript Practice</a>
+                        <a class="nav-link" href="{% url 'jspractice' %}">JavaScript Practice</a>
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
@@ -52,7 +53,7 @@
                 </tr>
                 <tr class="d-flex">
                     <td class="col-1">Javascript</td>
-                    <td class="col-1" id="no">No</td>
+                    <td class="col-1" id="yes">Yes</td>
                 </tr>
                 <tr class="d-flex">
                     <td class="col-1">JSON</td>
@@ -86,7 +87,7 @@
 
         <!-- Copyright -->
         <div class="footer">
-            <a href="https://github.com/wmentzer" class="fa fa-github"><img src="./images/GitHub.png"></a>
+            <a href="https://github.com/wmentzer" class="fa fa-github"><img src="../media/GitHub.png"></a>
             <p>Created by Will Mentzer</p>
         </div>
         <!-- Copyright -->
